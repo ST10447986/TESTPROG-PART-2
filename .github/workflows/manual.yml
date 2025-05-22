@@ -31,26 +31,26 @@ jobs:
      # Compiles classes to test 
       - name: compile classes
         working-directory: ./src
-        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar"  ./src/main/java/com/mycompany/st10447986_prog5121_poe/Message.java  "..src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java"
+        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar"  ./src/main/java/com/mycompany/st10447986_prog5121_poe/Message.java  "../src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java"
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
-        working-directory: ./src/src/main/java/com/mycompany/st10447986_prog5121_poe/Message.java
+        working-directory: ./src/main/java/com/mycompany/st10447986_prog5121_poe/Message.java
         run: ls
         
        # copy compiled classes to test directory 
       - name : copy compiled classes to testResources directory 
-        working-directory: ./src/src/main/java/com/mycompany/st10447986_prog5121_poe/Message.java
-        run: cp -t  "../..src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java" Message.class
+        working-directory: ./src/main/java/com/mycompany/st10447986_prog5121_poe/Message.java
+        run: cp -t  "../../src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java" Message.class
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
-        working-directory: .src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java
+        working-directory: ./src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java
         run: cp -t  "../../test/" MessageTest.class
         
         # list contents or directory
       - name: List contents test package
-        working-directory: .src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java
+        working-directory: ./src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java
         run: ls
         
         #run Login CLass test and output report
