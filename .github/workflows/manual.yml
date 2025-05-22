@@ -31,26 +31,26 @@ jobs:
      # Compiles classes to test 
       - name: compile classes
         working-directory: ./src
-        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar"  ./unittestactivity/Message.java  "../test/unittestactivity/MessageTest.java"
+        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar"  ./main/Message.java  "../test/main/Message.java"
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
-        working-directory: ./src/unittestactivity
+        working-directory: ./src/main
         run: ls
         
        # copy compiled classes to test directory 
       - name : copy compiled classes to testResources directory 
-        working-directory: ./src/unittestactivity
-        run: cp -t  "../../test/unittestactivity" Message.class
+        working-directory: ./src/main
+        run: cp -t  "../../test/main" Message.class
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
-        working-directory: ./test/unittestactivity
-        run: cp -t  "../../test/" MessageTest.class
+        working-directory: ./test/main
+        run: cp -t  "../../test/" Message.class
         
         # list contents or directory
       - name: List contents test package
-        working-directory: ./test/unittestactivity
+        working-directory: ./test/main
         run: ls
         
         #run Login CLass test and output report
@@ -58,4 +58,4 @@ jobs:
         working-directory: ./test
         run: |
           ls
-          java -jar "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class unittestactivity.MessageTest
+          java -jar "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class main.Message
