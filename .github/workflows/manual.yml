@@ -31,26 +31,26 @@ jobs:
      # Compiles classes to test 
       - name: compile classes
         working-directory: ./src
-        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar"  ./src/main/java/com/mycompany/st10447986_prog5121_poe/Message.java  "../src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java"
+        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar"  ./st10447986_prog5121_poe/Message.java  "../test/st10447986_prog5121_poe/MessageTest.java"
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
-        working-directory: ./src/main/java/com/mycompany/st10447986_prog5121_poe
+        working-directory: ./src/st10447986_prog5121_poe
         run: ls
         
        # copy compiled classes to test directory 
       - name : copy compiled classes to testResources directory 
-        working-directory: ./src/main/java/com/mycompany/st10447986_prog5121_poe
-        run: cp -t  "../../src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java" Message.class
+        working-directory: ./src/st10447986_prog5121_poe
+        run: cp -t  "../../test/st10447986_prog5121_poe" Message.class
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
-        working-directory: ./src/test/java/com/mycompany/st10447986_prog5121_poe
-        run: cp -t  "../../src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest.java" MessageTest.class
+        working-directory: ./test/st10447986_prog5121_poe
+        run: cp -t  "../../test/" MessageTest.class
         
         # list contents or directory
       - name: List contents test package
-        working-directory: ./src/test/java/com/mycompany/st10447986_prog5121_poe
+        working-directory: ./test/st10447986_prog5121_poe
         run: ls
         
         #run Login CLass test and output report
@@ -58,4 +58,4 @@ jobs:
         working-directory: ./test
         run: |
           ls
-          java -jar "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class src/test/java/com/mycompany/st10447986_prog5121_poe/MessageTest
+          java -jar "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class st10447986_prog5121_poe.MessageTest
