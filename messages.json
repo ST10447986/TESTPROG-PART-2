@@ -1,0 +1,9 @@
+{"Message":"Hello jack how are you?","Recipient":"+27123456789","Hash":"16:2:HELLOYOU?","MessageID":"1670240196"}
+{"Message":"+27712345678","Recipient":"INVALID","Hash":"30:1:+27712345678+27712345678","MessageID":"3027124490"}
+{"Message":"+27712345678","Recipient":"INVALID","Hash":"40:2:+27712345678+27712345678","MessageID":"4084891105"}
+{"Message":"Store this","Recipient":"+27812345678","Hash":"15:2:STORETHIS","MessageID":"1529593680"}
+{"Message":"Hi Mike, can you join us for dinner tonight","Recipient":"+27718693002","Hash":"68:1:HITONIGHT","MessageID":"6867531159"}
+{"Message":"Hi Mike, can you join us for dinner tonight","Recipient":"+27718693002","Hash":"39:3:HITONIGHT","MessageID":"3991226814"}
+{"Message":"Hi Mike, can you join us for dinner tonight","Recipient":"+27718693002","Hash":"65:1:HITONIGHT","MessageID":"6534546430"}
+{"Message":"Hi Mike, can you join us for dinner tonight","Recipient":"+27718693002","Hash":"25:3:HITONIGHT","MessageID":"2522669404"}
+{"Message":"HI","Recipient":"+27123456789","Hash":"45:2:HIHI","MessageID":"4530095927"}
